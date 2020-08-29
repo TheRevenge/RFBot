@@ -1,0 +1,34 @@
+{
+	"prefix": "!",
+	"token": "NzQ4OTA3ODY1NDY4NTY3NjMz.X0kQzQ.NLi5W8jvh1aajc4XT_z3TyNqmks",
+	"img": "https://i.imgur.com/f0qF2yJ.png",
+	"name": "RFBot",
+	"color": "#0099ff",
+	"verifyChannel": "",
+	"roles": {
+		"admin": "",
+		"unverified": "",
+		"verified": "",
+		"ranks": {
+			"GD": "",
+			"BG": "",
+			"HG": "",
+			"THG": "",
+			"GE": "",
+			"G": "",
+			"A": "",
+			"AG": ""
+		},
+		"filials": {
+			"PN": "",
+			"CM": "",
+			"GN": "",
+			"CHU": "",
+			"R": "",
+			"AS": "",
+			"DA": "",
+			"J": "",
+			"ST": ""
+		}
+	}
+}
