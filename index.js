@@ -53,7 +53,7 @@ client.once('ready', () => {
 	const t1 = new Date() - t0;
 	log(`Took : ${Math.round(t1)}ms`);
 	log('=============', false, 'green');
-	chalkAnimation.rainbow('Made with <3 by CptHenri');
+	// chalkAnimation.rainbow('Made with <3 by CptHenri');
 });
 
 client.on('message', message => {
