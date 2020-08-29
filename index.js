@@ -382,7 +382,7 @@ client.on('guildMemberAdd', guildMember => {
 /* eslint-enable */
 try {
 	log('Loggin in...', true);
-	client.login(config.token);
+	client.login(process.env.BOT_TOKEN);
 }
 catch (e) {
 	log(chalk.red(e));
