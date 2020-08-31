@@ -100,6 +100,32 @@ module.exports = {
 
 																	data.data.groups.forEach(function(group) {
 																		switch (group.id) {
+																		// VIP
+																		case 'g-hhfr-e91735dbd8340a304a80d5590c32fd23':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.VIP);
+																			guildMember.roles.add(role);
+																			break;
+																		// Recrue PN,CM,GN,CHU,Resto
+																		case 'g-hhfr-04a3080c14a40250bf5d169b56186c6f':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
+																			guildMember.roles.add(role);
+																			break;
+																		case 'g-hhfr-86cc3fce1be56495b490434e9a801fb4':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
+																			guildMember.roles.add(role);
+																			break;
+																		case 'g-hhfr-f724f4e0cd385825ef7245c83690302b':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
+																			guildMember.roles.add(role);
+																			break;
+																		case 'g-hhfr-7eaee7cafa1e88a4c2a3b80bdc5952ba':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
+																			guildMember.roles.add(role);
+																			break;
+																		case 'g-hhfr-4050526c64bc359368597bcef634d94f':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
+																			guildMember.roles.add(role);
+																			break;
 																		// GD
 																		case 'g-hhfr-9495b4e7b9c093c9a4414de96e2714e1':
 																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.GD);
@@ -145,7 +171,7 @@ module.exports = {
 																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.AG);
 																			guildMember.roles.add(role);
 																			break;
-																			// L
+																			// R
 																		case 'g-hhfr-ed5f341cdb08fd351747fefec7d4cbea':
 																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.R);
 																			guildMember.roles.add(role);
@@ -180,7 +206,7 @@ module.exports = {
 																		}
 																	});
 																	// If has no HQ
-																	if (guildMember.roles.cache.some(r => r.id === ranks.AG) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.R) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.AS) || guildMember.roles.cache.some(r => r.id === ranks.DA) || guildMember.roles.cache.some(r => r.id === ranks.ST) || guildMember.roles.cache.some(r => r.id === ranks.J) || guildMember.roles.cache.some(r => r.id === ranks.A) || guildMember.roles.cache.some(r => r.id === ranks.P)) {
+																	if (guildMember.roles.cache.some(r => r.id === ranks.AG) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.R) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.AS) || guildMember.roles.cache.some(r => r.id === ranks.DA) || guildMember.roles.cache.some(r => r.id === ranks.ST) || guildMember.roles.cache.some(r => r.id === ranks.J) || guildMember.roles.cache.some(r => r.id === ranks.A) || guildMember.roles.cache.some(r => r.id === ranks.P) || guildMember.roles.cache.some(r => r.id === ranks.VIP)) {
 																		embded.setTitle('Succès !')
 																			.setColor('#00FE23')
 																			.setDescription('Ton compte a bien été vérifié, tu vas bientôt recevoir tes rôles !');
