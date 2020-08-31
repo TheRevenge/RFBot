@@ -3,7 +3,7 @@ const config = require('../config.json');
 
 module.exports = {
 	name: 'ping',
-	description: 'Ping!',
+	description: 'Vérifie si le bot est en ligne.',
 	execute(message) {
 		const embed = new Discord.MessageEmbed()
 			.setColor(config.color)
