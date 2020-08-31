@@ -6,6 +6,7 @@ module.exports = {
 	description: 'Donne la liste des commandes et les détails sur une commande spécifique.',
 	aliases: ['h', 'commands', 'cmds'],
 	usage: '[command name]',
+	role: 'admin',
 	execute(message, args) {
 		// Loading up commands
 		const { commands } = message.client;
@@ -25,7 +26,7 @@ module.exports = {
 			if (!command) {
 				embded.setColor('#FF0106')
 					.setTitle('Error :')
-					.setDescription('Invalid argument.');
+					.setDescription('Argument invalide !');
 				return message.channel.send(embded);
 			}
 
