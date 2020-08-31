@@ -147,12 +147,12 @@ module.exports = {
 																			break;
 																			// L
 																		case 'g-hhfr-ed5f341cdb08fd351747fefec7d4cbea':
-																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.L);
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.R);
 																			guildMember.roles.add(role);
 																			break;
 																			// AS
 																		case 'g-hhfr-31795d94cc7f959b39d73e50b179a58e':
-																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.AS);
+																			role = guildMember.guild.roles.cache.find(r => r.id === filials.AS);
 																			guildMember.roles.add(role);
 																			break;
 																			// ST
