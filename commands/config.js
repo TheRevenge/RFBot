@@ -5,7 +5,7 @@ const fs = require('fs');
 
 module.exports = {
 	name: 'config',
-	description: 'Change la configuration de ce bot. Voici la liste des paramètres disponibles :\n`prefix` => Préfixe du bot\n`img` => Image du bot (embed)\n`name` => Nom du bot (embed)\n`color` => Couleur des messages\n`verifyChannel` => Id du salon textuel de vérification\n`roles [role]` => Liste des rôles dont voici la liste: \n>`admin` => Id rôle admin\n>`unverified` => Id rôle non-vérifié\n>`verified` => Id rôle vérifié\n>`ranks [rank]` => Liste des grades (`VIP`,`REC (Recrue)`,`GD`,`HG`,`THG`,`GE`,`G`(Gouvernement),`P`(Président),`A`(Admin),`AG`(Ancien Gradé),`AHG`(Ancien HG),`ATHG`(Ancien THG),`AGE`(Ancien Gradé Expert),`R`(Retraité),`C`(Citoyen),`DA`,`J`,`ST`)\n>`filials [filial]` => Liste des filières (`PN`,`CM`,`GN`,`CHU`,`R`,`AS`)',
+	description: 'Change la configuration de ce bot. Voici la liste des paramètres disponibles :\n`prefix` => Préfixe du bot\n`img` => Image du bot (embed)\n`name` => Nom du bot (embed)\n`color` => Couleur des messages\n`verifyChannel` => Id du salon textuel de vérification\n`roles [role]` => Liste des rôles dont voici la liste: \n>`admin` => Id rôle admin\n>`unverified` => Id rôle non-vérifié\n>`verified` => Id rôle vérifié\n>`ranks [rank]` => Liste des grades (`VIP`,`REC (Recrue)`,`GD`,`HG`,`THG`,`GE`,`G`(Gouvernement),`P`(Président),`A`(Admin),`AG`(Ancien Gradé),`AHG`(Ancien HG),`ATHG`(Ancien THG),`AGE`(Ancien Gradé Expert),`R`(Retraité),`C`(Citoyen),`DA`,`J`,`ST`,`AS`)\n>`filials [filial]` => Liste des filières (`PN`,`CM`,`GN`,`CHU`,`R`,`AS`)',
 	aliases: ['settings'],
 	usage: '[paramètre] [valeur]',
 	role: 'admin',
