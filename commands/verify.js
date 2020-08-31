@@ -180,7 +180,7 @@ module.exports = {
 																		}
 																	});
 																	// If has no HQ
-																	if (guildMember.roles.cache.some(r => r.id === ranks.AG) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.R) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.AS) || guildMember.roles.cache.some(r => r.id === ranks.DA) || guildMember.roles.cache.some(r => r.id === ranks.ST) || guildMember.roles.cache.some(r => r.id === ranks.J) || guildMember.roles.cache.some(r => r.id === ranks.A) || guildMember.roles.cache.some(r => r.id === ranks.P)) {
+																	if (guildMember.roles.cache.some(r => r.id === ranks.AG) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.R) && !guildMember.roles.cache.some(r => r.id === ranks.GD) || guildMember.roles.cache.some(r => r.id === ranks.AS) || guildMember.roles.cache.some(r => r.id === ranks.DA) || guildMember.roles.cache.some(r => r.id === ranks.ST) || guildMember.roles.cache.some(r => r.id === ranks.J) || guildMember.roles.cache.some(r => r.id === ranks.A) || guildMember.roles.cache.some(r => r.id === ranks.P) || guildMember.roles.cache.some(r => r.id === ranks.VIP)) {
 																		embded.setTitle('Succès !')
 																			.setColor('#00FE23')
 																			.setDescription('Ton compte a bien été vérifié, tu vas bientôt recevoir tes rôles !');
