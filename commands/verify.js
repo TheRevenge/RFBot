@@ -100,6 +100,11 @@ module.exports = {
 
 																	data.data.groups.forEach(function(group) {
 																		switch (group.id) {
+																		// VIP
+																		case 'g-hhfr-e91735dbd8340a304a80d5590c32fd23':
+																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.VIP);
+																			guildMember.roles.add(role);
+																			break;
 																		// GD
 																		case 'g-hhfr-9495b4e7b9c093c9a4414de96e2714e1':
 																			role = guildMember.guild.roles.cache.find(r => r.id === ranks.GD);
