@@ -1,6 +1,7 @@
 // npm install discord.js
 // npm install chalk
 // npm install chalk-animation
+// npm install js-beautify
 
 // Starting chrono
 const t0 = new Date();
@@ -10,7 +11,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const config = require('./config.json');
 const chalk = require('chalk');
-const chalkAnimation = require('chalk-animation');
+// const chalkAnimation = require('chalk-animation');
 
 // Functions
 const log = function(m, sL = false, c = null) {
@@ -136,7 +137,7 @@ client.on('guildMemberAdd', guildMember => {
 				.setFooter(config.name, config.img)
 				.setAuthor(config.name, config.img)
 				.setTitle(`Bienvenue ${guildMember.user.tag} !`)
-				.setDescription('Pour avoir accès à l\'entièreté de ce serveur, fais !verify dans le salon de vérification');
+				.setDescription(`Pour avoir accès à l'entièreté de ce serveur, fais \`${config.prefix}verify\` dans le salon de vérification.`);
 			guildMember.send(embded);
 		});
 

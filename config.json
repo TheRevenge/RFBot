@@ -1,6 +1,5 @@
 {
 	"prefix": "!",
-	"token": "",
 	"img": "https://i.imgur.com/U0lyeJH.png",
 	"name": "RFBot",
 	"color": "#0099ff",
@@ -16,8 +15,10 @@
 			"THG": "",
 			"GE": "",
 			"G": "",
+			"P": "",
 			"A": "",
 			"AG": "",
+			"R": "",
 			"C": ""
 		},
 		"filials": {
