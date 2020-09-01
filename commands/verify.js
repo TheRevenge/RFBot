@@ -84,12 +84,15 @@ module.exports = {
 											errors: ['time'],
 										})
 											.then(() => {
+												let errors = 0;
+
 												// Fetch the in-game motto
-												axios.get('https://www.habbo.fr/api/public/users?name=' + gameUsername)
-													.then(response2 => {
+												const retry = function() {
+													axios.get('https://www.habbo.fr/api/public/users?name=' + gameUsername)
+														.then(response2 => {
 														// JSON responses are automatically parsed.
-														let errors = 0;
-														const retry = function() {
+
+
 															if (response2.data.motto.indexOf(code) > -1) {
 
 																guildMember.setNickname(gameUsername);
@@ -107,7 +110,7 @@ module.exports = {
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.VIP);
 																				guildMember.roles.add(role);
 																				break;
-																				// Recrue PN,CM,GN,CHU,Resto
+																			// Recrue PN,CM,GN,CHU,Resto
 																			case 'g-hhfr-04a3080c14a40250bf5d169b56186c6f':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
 																				guildMember.roles.add(role);
@@ -128,7 +131,7 @@ module.exports = {
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.REC);
 																				guildMember.roles.add(role);
 																				break;
-																				// GD
+																			// GD
 																			case 'g-hhfr-9495b4e7b9c093c9a4414de96e2714e1':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.GD);
 																				guildMember.roles.add(role);
@@ -309,8 +312,8 @@ module.exports = {
 																	retry();
 																}
 															}
-														};
-													});
+														});
+												};
 											})
 											.catch(collected3 => {
 												if (collected3) return;
