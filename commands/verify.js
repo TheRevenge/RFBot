@@ -84,15 +84,13 @@ module.exports = {
 											errors: ['time'],
 										})
 											.then(() => {
-												let errors = 0;
-
+												message2.reactions.removeAll();
+												message2.react('🔄');
 												// Fetch the in-game motto
-												const retry = function() {
+												setTimeout(() => {
 													axios.get('https://www.habbo.fr/api/public/users?name=' + gameUsername)
 														.then(response2 => {
-														// JSON responses are automatically parsed.
-
-
+															// JSON responses are automatically parsed.
 															if (response2.data.motto.indexOf(code) > -1) {
 
 																guildMember.setNickname(gameUsername);
@@ -136,52 +134,52 @@ module.exports = {
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.GD);
 																				guildMember.roles.add(role);
 																				break;
-																			// BG
+																				// BG
 																			case 'g-hhfr-52311da472fdbec754d9c7aafa64a06c':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.BG);
 																				guildMember.roles.add(role);
 																				break;
-																			// HG
+																				// HG
 																			case 'g-hhfr-6a09545457e8f05f5704547fe8b56801':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.HG);
 																				guildMember.roles.add(role);
 																				break;
-																			// THG
+																				// THG
 																			case 'g-hhfr-ddaea77adf6d662bc2738a6151651f63':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.THG);
 																				guildMember.roles.add(role);
 																				break;
-																			// GE
+																				// GE
 																			case 'g-hhfr-38e3f87342f5945ef73b73a46c6e83c1':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.GE);
 																				guildMember.roles.add(role);
 																				break;
-																			// G
+																				// G
 																			case 'g-hhfr-6130266dd6f5dc9ae3ffce13bbecefed':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.G);
 																				guildMember.roles.add(role);
 																				break;
-																			// P
+																				// P
 																			case 'g-hhfr-a564dd041fd8d39d4a1acffdd1348f7b':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.P);
 																				guildMember.roles.add(role);
 																				break;
-																			// A
+																				// A
 																			case 'g-hhfr-6c04bedf61777e2cee2c2e90dd72ac3f':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.A);
 																				guildMember.roles.add(role);
 																				break;
-																			// Old officer (Ancien Gradé)
+																				// Old officer (Ancien Gradé)
 																			case 'g-hhfr-2e537dd6392bc63ee74a8402b3bf612e':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.AG);
 																				guildMember.roles.add(role);
 																				break;
-																			// R
+																				// R
 																			case 'g-hhfr-ed5f341cdb08fd351747fefec7d4cbea':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.R);
 																				guildMember.roles.add(role);
 																				break;
-																			// AS
+																				// AS
 																			case 'g-hhfr-31795d94cc7f959b39d73e50b179a58e':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.AS);
 																				guildMember.roles.add(role);
@@ -189,22 +187,22 @@ module.exports = {
 																				role = guildMember.guild.roles.cache.find(r => r.id === filials.AS);
 																				guildMember.roles.add(role);
 																				break;
-																			// ST
+																				// ST
 																			case 'g-hhfr-91e2362218d22fc1abd5824482fb1319':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.ST);
 																				guildMember.roles.add(role);
 																				break;
-																			// DA
+																				// DA
 																			case 'g-hhfr-667698dd9d020235251732a4e0df3c7f':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.DA);
 																				guildMember.roles.add(role);
 																				break;
-																			// J
+																				// J
 																			case 'g-hhfr-e6f24e7f8ad2da1772156223a5a6f1b2':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.J);
 																				guildMember.roles.add(role);
 																				break;
-																			// Citizen
+																				// Citizen
 																			case 'g-hhfr-6212ac32a1d173740afd63a67af245c7':
 																				role = guildMember.guild.roles.cache.find(r => r.id === ranks.C);
 																				guildMember.roles.add(role);
@@ -300,20 +298,14 @@ module.exports = {
 																	});
 															}
 															else {
-																if (errors == 4) {
-																	embded.setColor('#FF0106')
-																		.setTitle('Oops !')
-																		.setDescription('Le code est incorrect, recommence !');
-																	guildMember.send(embded);
-																	reset();
-																}
-																else{
-																	errors++;
-																	retry();
-																}
+																embded.setColor('#FF0106')
+																	.setTitle('Oops !')
+																	.setDescription('Le code est incorrect, recommence !');
+																guildMember.send(embded);
+																reset();
 															}
 														});
-												};
+												}, 5000);
 											})
 											.catch(collected3 => {
 												if (collected3) return;
